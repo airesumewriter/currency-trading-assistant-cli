@@ -24,11 +24,11 @@ __pycache__/
 *.swp
 *.swo
 
-# Data files
+# Data files (raw data downloads, not source code)
 data/
 downloads/
 
-# AI models
+# AI models (binary files, not source code)
 models/
 *.bin
 *.ggml
@@ -53,3 +53,6 @@ Thumbs.db
 Currency Trading Assistant MVP Deve.txt
 New Text Document.txt
 setup.py
+
+# Note: We DON'T want to ignore backend/app/data/ directory 
+# because it contains our Python source code, not data files
