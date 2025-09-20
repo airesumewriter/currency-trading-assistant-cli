@@ -4,6 +4,18 @@ url = "sqlite:///./trading.db"
 [oanda]
 api_key = "your_oanda_api_key_here"
 
+[alphavantage]
+api_key = "GARJ46JPDQ5H5PFW"
+base_url = "https://www.alphavantage.co/query"
+
+[data]
+primary_source = "alphavantage"
+fallback_source = "dukascopy"
+
+[alphavantage.defaults]
+interval = "60min"
+output_size = "compact"
+
 [ai]
 enabled = true
 model_path = "TheBloke/Llama-2-7B-Chat-GGML"
