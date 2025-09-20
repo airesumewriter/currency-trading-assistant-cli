@@ -1,0 +1,55 @@
+﻿# Virtual environment
+venv/
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+*.db-journal
+
+# Logs
+*.log
+logs/
+
+# Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files
+data/
+downloads/
+
+# AI models
+models/
+*.bin
+*.ggml
+
+# Config secrets
+config/secrets.toml
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Specific files to ignore
+Currency Trading Assistant MVP Deve.txt
+New Text Document.txt
+setup.py

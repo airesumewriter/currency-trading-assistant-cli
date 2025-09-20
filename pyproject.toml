@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "currency-trading-assistant-cli"
+version = "0.1.0"
+description = "CLI for Currency Trading Assistant with AI integration"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi==0.104.1",
+    "sqlalchemy==2.0.23",
+    "pandas==2.1.4",
+    "backtrader==1.9.76.123",
+    "requests==2.31.0",
+    "transformers==4.36.2",
+    "torch==2.1.1",
+    "tabulate==0.9.0",
+    "toml==0.10.2"
+]
+
+[project.scripts]
+trading-cli = "cli.main:main"
+
+[tool.setuptools]
+packages = ["cli", "cli.commands", "cli.utils"]
+
+[tool.setuptools.package-dir]
+cli = "cli"

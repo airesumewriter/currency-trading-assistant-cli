@@ -1,0 +1,31 @@
+﻿[database]
+url = "sqlite:///./trading.db"
+
+[oanda]
+api_key = "your_oanda_api_key_here"
+
+[ai]
+enabled = true
+model_path = "TheBloke/Llama-2-7B-Chat-GGML"
+
+[logging]
+level = "INFO"
+file = "trading_cli.log"
+
+[backtest]
+min_trades = 500
+win_rate_threshold = 0.98
+bootstrap_n = 10000
+
+[slippage]
+EURUSD = 2
+GBPUSD = 2
+XAUUSD = 5
+
+[spread]
+EURUSD = 0.1
+GBPUSD = 0.2
+XAUUSD = 0.3
+
+[commission]
+per_lot = 3.5
