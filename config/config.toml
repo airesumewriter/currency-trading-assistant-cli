@@ -1,4 +1,4 @@
-﻿[database]
+[database]
 url = "sqlite:///./trading.db"
 
 [oanda]

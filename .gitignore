@@ -24,9 +24,9 @@ __pycache__/
 *.swp
 *.swo
 
-# Data files (raw data downloads, not source code)
-data/
-downloads/
+# Data files (raw data downloads, not source code) - be more specific
+/data/          # Only ignore root-level data/ directory
+/downloads/     # Only ignore root-level downloads/ directory
 
 # AI models (binary files, not source code)
 models/
@@ -54,5 +54,5 @@ Currency Trading Assistant MVP Deve.txt
 New Text Document.txt
 setup.py
 
-# Note: We DON'T want to ignore backend/app/data/ directory 
+# Note: We want to keep backend/app/data/ directory 
 # because it contains our Python source code, not data files
