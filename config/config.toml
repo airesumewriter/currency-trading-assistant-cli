@@ -18,7 +18,8 @@ output_size = "compact"
 
 [ai]
 enabled = true
-model_path = "TheBloke/Llama-2-7B-Chat-GGML"
+model_name = "microsoft/DialoGPT-small"
+model_type = "transformers"
 
 [logging]
 level = "INFO"
