@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>? API Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .success { color: green; }
+        .error { color: red; }
+        .card { border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>API Test Page</h1>
+    
+    <div class="card">
+        <h3>Health Check</h3>
+        <button onclick="testHealth()">Test Health Endpoint</button>
+        <div id="health-result"></div>
+    </div>
+
+    <div class="card">
+        <h3>Price Check</h3>
+        <input type="text" id="instrument" value="EURUSD" placeholder="Enter instrument">
+        <button onclick="testPrice()">Get Price</button>
+        <div id="price-result"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8001';
+
+        async function testHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/api/health`);
+                const data = await response.json();
+                document.getElementById('health-result').innerHTML = 
+                    `<span class="success">? SUCCESS</span><br>Status: ${data.status}<br>Time: ${data.timestamp}`;
+            } catch (error) {
+                document.getElementById('health-result').innerHTML = 
+                    `<span class="error">? ERROR: ${error.message}</span>`;
+            }
+        }
+
+        async function testPrice() {
+            const instrument = document.getElementById('instrument').value;
+            try {
+                const response = await fetch(`${API_BASE}/api/prices/${instrument}`);
+                const data = await response.json();
+                document.getElementById('price-result').innerHTML = 
+                    `<span class="success">? SUCCESS</span><br>
+                     Instrument: ${data.instrument}<br>
+                     Price: ${data.price}<br>
+                     Time: ${data.timestamp}`;
+            } catch (error) {
+                document.getElementById('price-result').innerHTML = 
+                    `<span class="error">? ERROR: ${error.message}</span>`;
+            }
+        }
+
+        // Test health on page load
+        testHealth();
+    </script>
+</body>
+</html>

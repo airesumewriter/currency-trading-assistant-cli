@@ -8,6 +8,9 @@ api_key = "your_oanda_api_key_here"
 api_key = "GARJ46JPDQ5H5PFW"
 base_url = "https://www.alphavantage.co/query"
 
+[api_keys]
+alpha_vantage = "GARJ46JPDQ5H5PFW"
+
 [data]
 primary_source = "alphavantage"
 fallback_source = "dukascopy"
