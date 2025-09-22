@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "trading-dashboard-frontend",
   "version": "1.0.0",
   "description": "Currency Trading Dashboard",
@@ -16,10 +16,8 @@
     "@mui/material": "^5.14.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "chart.js": "^4.4.0",
-    "react-chartjs-2": "^5.2.0",
     "axios": "^1.5.0",
-    "socket.io-client": "^4.7.2"
+    "recharts": "^2.8.0"
   },
   "browserslist": {
     "production": [

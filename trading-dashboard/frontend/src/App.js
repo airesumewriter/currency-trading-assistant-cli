@@ -7,18 +7,30 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#90caf9',
+      main: '#4caf50', // Green for bullish
     },
     secondary: {
-      main: '#f48fb1',
+      main: '#f44336', // Red for bearish
     },
     background: {
-      default: '#121212',
-      paper: '#1e1e1e',
+      default: '#0a0a0a', // Very dark background
+      paper: '#1a1a1a',   // Slightly lighter for cards
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Roboto Mono", "Courier New", monospace',
+    h4: {
+      fontWeight: 'bold',
+    },
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none', // Remove gradient
+        },
+      },
+    },
   },
 });
 
@@ -26,9 +38,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div className="App" style={{ padding: '20px', minHeight: '100vh' }}>
-        <Dashboard />
-      </div>
+      <Dashboard />
     </ThemeProvider>
   );
 }
