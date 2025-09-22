@@ -56,3 +56,6 @@ setup.py
 
 # Note: We want to keep backend/app/data/ directory 
 # because it contains our Python source code, not data files
+
+# Frontend cache
+node_modules/.cache/
